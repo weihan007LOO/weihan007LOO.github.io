@@ -384,6 +384,24 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- View All Button -->
+                    <div class="text-center mt-4">
+                        <button id="view-all-btn" class="px-6 py-2 bg-gradient-to-r from-aurora-green to-aurora-blue text-dark-bg font-semibold rounded-full hover:shadow-lg transition">
+                            View All
+                        </button>
+                    </div>
+                </div>
+                
+                <script>
+                    const btn = document.getElementById('view-all-btn');
+                    const extraCard = document.getElementById('extra-leadership');
+                
+                    btn.addEventListener('click', () => {
+                        extraCard.classList.toggle('hidden');
+                        btn.textContent = extraCard.classList.contains('hidden') ? 'View All' : 'Show Less';
+                    });
+                </script>
                 
             </div>
         </div>  
