@@ -276,7 +276,21 @@
                     <div class="absolute -left-2 top-0 w-4 h-4 bg-aurora-green rounded-full"></div>
                     <div class="bg-dark-card p-6 rounded-lg card-hover">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold text-aurora-green">Hotel Lobby Concierge </h3>
+                            <h3 class="text-xl font-semibold text-aurora-green">Online Tutor </h3>
+                            <span class="text-sm text-gray-400"> Oct 2025 - Present</span>
+                        </div>
+                        <p class="text-gray-300 font-medium mb-2">Frenztalk Online Platform</p>
+                        <p class="text-gray-400">
+                            Conduct online tutoring sessions, helping students understand complex concepts through structured explanations and problem-solving guidance. Strengthened communication and mentoring skills while adapting teaching methods to different learning styles using digital learning platforms.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 border-l-2 border-aurora-blue">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-aurora-blue rounded-full"></div>
+                    <div class="bg-dark-card p-6 rounded-lg card-hover">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold text-aurora-blue">Hotel Lobby Concierge </h3>
                             <span class="text-sm text-gray-400"> Aug 2025 - Oct 2025</span>
                         </div>
                         <p class="text-gray-300 font-medium mb-2">Grand Lexis Port Dickson</p>
@@ -287,11 +301,11 @@
                     </div>
                 </div>
 
-                <div class="relative pl-8 border-l-2 border-aurora-blue">
-                    <div class="absolute -left-2 top-0 w-4 h-4 bg-aurora-blue rounded-full"></div>
+                <div class="relative pl-8 border-l-2 border-aurora-purple">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-aurora-purple rounded-full"></div>
                     <div class="bg-dark-card p-6 rounded-lg card-hover">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold text-aurora-blue">Service Cashier</h3>
+                            <h3 class="text-xl font-semibold text-aurora-purple">Service Cashier</h3>
                             <span class="text-sm text-gray-400">Aug 2024 - Oct 2024</span>
                         </div>
                         <p class="text-gray-300 font-medium mb-2">Lotus's Lukut</p>
@@ -302,11 +316,11 @@
                     </div>
                 </div>
 
-                <div class="relative pl-8 border-l-2 border-aurora-purple">
-                    <div class="absolute -left-2 top-0 w-4 h-4 bg-aurora-purple rounded-full"></div>
+                <div class="relative pl-8 border-l-2 border-aurora-pink hidden">
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-aurora-pink rounded-full"></div>
                     <div class="bg-dark-card p-6 rounded-lg card-hover">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold text-aurora-purple">Dining Room Attendant</h3>
+                            <h3 class="text-xl font-semibold text-aurora-pink">Dining Room Attendant</h3>
                             <span class="text-sm text-gray-400">Mar 2022 - May 2022</span>
                         </div>
                         <p class="text-gray-300 font-medium mb-2">Easy Bar & Restaurant</p>
@@ -315,6 +329,23 @@
                         </p>
                     </div>
                 </div>
+                <!-- View All Button -->
+                    <div class="text-center mt-4">
+                        <button id="view-all-btn" class="px-6 py-2 bg-gradient-to-r from-aurora-green to-aurora-blue text-dark-bg font-semibold rounded-full hover:shadow-lg transition">
+                            View All
+                        </button>
+                    </div>
+                </div>
+                
+                <script>
+                    const btn = document.getElementById('view-all-btn');
+                    const extraCard = document.getElementById('extra-leadership');
+                
+                    btn.addEventListener('click', () => {
+                        extraCard.classList.toggle('hidden');
+                        btn.textContent = extraCard.classList.contains('hidden') ? 'View All' : 'Show Less';
+                    });
+                </script>
             </div>
         </div>
     </section>
