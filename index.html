@@ -188,39 +188,53 @@
 
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative">
-        <div class="container mx-auto px-6 text-center z-10">
-            <div class="animate-slide-up">
-                <h1 class="text-5xl md:text-7xl font-bold mb-4">
-                    Hello, I'm <span class="gradient-text">Wei Han Loo</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-400 mb-8">Electrical Engineer | Universiti Malaya | 3rd Year Undergraduate</p>
-                <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-12">
-                    Exploring semiconductors and embedded systems to create intelligent devices. 
-                    Passionate about robotics, AI, and electronics that turn ideas into practical solutions.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#portfolio" class="px-8 py-3 bg-gradient-to-r from-aurora-green to-aurora-blue rounded-full text-dark-bg font-semibold hover:shadow-lg hover:shadow-aurora-green/50 transition transform hover:scale-105">
-                        View My Work
-                    </a>
-                    <a href="resume.pdf" class="px-8 py-3 border-2 border-aurora-green rounded-full hover:bg-aurora-green hover:text-dark-bg transition transform hover:scale-105">
-                        Download CV
-                    </a>
-                </div>
-                <div class="relative">
-                  <div class="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-aurora-green via-aurora-blue to-aurora-purple p-1">
-                    <div class="w-full h-full rounded-full bg-dark-bg flex items-center justify-center overflow-hidden">
-                      <img src="images/profilepic.jpeg" alt="My Photo" class="w-full h-full object-cover object-center rounded-full">
-                    </div>
-                  </div>
-                </div>
-                <div class="mt-12 flex justify-center space-x-6">
-                    <a href="#" class="text-2xl hover:text-aurora-green transition"><i class="fab fa-github"></i></a>
-                    <a href="#" class="text-2xl hover:text-aurora-blue transition"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="text-2xl hover:text-aurora-purple transition"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-2xl hover:text-aurora-pink transition"><i class="fab fa-instagram"></i></a>
+        <div class="container mx-auto px-6 z-10">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- Left: Text -->
+        <div class="animate-slide-up text-center md:text-left">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">
+                Hello, I'm <span class="gradient-text">Wei Han Loo</span>
+            </h1>
+
+            <p class="text-xl md:text-2xl text-gray-400 mb-6">
+                Electrical Engineer | Universiti Malaya | 3rd Year Undergraduate
+            </p>
+
+            <p class="text-lg text-gray-500 max-w-xl mb-10">
+                Exploring semiconductors and embedded systems to create intelligent devices. 
+                Passionate about robotics, AI, and electronics that turn ideas into practical solutions.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="#portfolio" class="px-8 py-3 bg-gradient-to-r from-aurora-green to-aurora-blue rounded-full text-dark-bg font-semibold hover:shadow-lg hover:shadow-aurora-green/50 transition transform hover:scale-105">
+                    View My Work
+                </a>
+
+                <a href="resume.pdf" class="px-8 py-3 border-2 border-aurora-green rounded-full hover:bg-aurora-green hover:text-dark-bg transition transform hover:scale-105">
+                    Download CV
+                </a>
+            </div>
+
+            <div class="mt-10 flex justify-center md:justify-start space-x-6">
+                <a href="#" class="text-2xl hover:text-aurora-green transition"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-2xl hover:text-aurora-blue transition"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-2xl hover:text-aurora-purple transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-2xl hover:text-aurora-pink transition"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Right: Profile Picture -->
+        <div class="flex justify-center md:justify-end animate-slide-up">
+            <div class="w-72 h-72 rounded-full bg-gradient-to-br from-aurora-green via-aurora-blue to-aurora-purple p-1">
+                <div class="w-full h-full rounded-full bg-dark-bg flex items-center justify-center overflow-hidden">
+                    <img src="images/profilepic.jpeg" class="w-full h-full object-cover object-center rounded-full">
                 </div>
             </div>
         </div>
+
+    </div>
+</div>
         <!-- Animated particles -->
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
             <div class="absolute w-2 h-2 bg-aurora-green rounded-full animate-float" style="top: 20%; left: 10%;"></div>
