@@ -20,6 +20,8 @@
                         'aurora-blue': '#00aaff',
                         'aurora-purple': '#aa00ff',
                         'aurora-pink': '#ff00aa',
+                        'aurora-yellow': '#ffdd00',
+                        'aurora-teal': '#00ffd8',
                         'dark-bg': '#0a0e1a',
                         'dark-card': '#1a1f2e',
                         'dark-border': '#2a2f3e'
@@ -181,9 +183,19 @@
             </p>
         </div>
 
+        <!-- Awards & Honors -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-purple">Awards & Honors</h2>
+            <p class="text-gray-300 leading-relaxed">
+                ED-CARD was awarded Champion at the EEConnect Pitching Competition, a faculty-level competition for Electrical Engineering students at 
+                Universiti Malaya. The project was recognized for its strong innovation, clinical relevance, and solid technical execution, highlighting 
+                its potential impact in improving emergency department workflows and patient care.
+            </p>
+        </div>
+
         <!-- Problem -->
         <div class="mb-10">
-            <h2 class="text-2xl font-semibold mb-4 text-aurora-purple">Problem</h2>
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-pink">Problem</h2>
             <p class="text-gray-300 leading-relaxed">
                 Emergency departments often face high patient volumes, especially in non-critical (green zone) cases, 
                 leading to inefficiencies in triage and consultation. Key challenges include:
@@ -202,7 +214,7 @@
 
         <!-- Solution -->
         <div class="mb-10">
-            <h2 class="text-2xl font-semibold mb-4 text-aurora-pink">Solution</h2>
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-green">Solution</h2>
             <p class="text-gray-300 leading-relaxed">
                 ED-CARD addresses these challenges by providing an intelligent pre-consultation system that digitizes and structures patient input before 
                 doctor interaction. The platform leverages Large Language Models (LLMs) combined with rule-based clinical logic to:
@@ -220,7 +232,7 @@
 
         <!-- Features -->
         <div class="mb-10">
-            <h2 class="text-2xl font-semibold mb-4 text-aurora-green">Key Features</h2>
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-yellow">Key Features</h2>
             <ul class="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
                     <span class="font-semibold">AI-Assisted Clinical Summarization</span>
@@ -263,7 +275,7 @@
 
         <!-- Current Progress -->
         <div class="mb-10">
-            <h2 class="text-2xl font-semibold mb-4 text-aurora-yellow">Future Development</h2>
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-teal">Future Development</h2>
             <p class="text-gray-300 leading-relaxed">
                 Through the development and evaluation of ED-CARD, we identified a key limitation: a lack of continuous monitoring of patient health after 
                 the initial pre-consultation stage. To address this gap, future work will focus on integrating remote photoplethysmography (rPPG), a non-contact 
@@ -280,7 +292,7 @@
         <!-- Gallery -->
 <!-- Gallery -->
 <div class="mb-10">
-    <h2 class="text-2xl font-semibold mb-4 text-aurora-teal">Project Gallery</h2>
+    <h2 class="text-2xl font-semibold mb-4 text-aurora-blue">Project Gallery</h2>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <a href="../images/edphoto.jpeg" class="gallery-item" data-index="0">
@@ -359,15 +371,7 @@
         if (e.target === lightbox) lightbox.classList.add('hidden');
     });
 </script>
-        <!-- Awards & Honors -->
-        <div class="mb-10">
-            <h2 class="text-2xl font-semibold mb-4 text-aurora-blue">Awards & Honors</h2>
-            <p class="text-gray-300 leading-relaxed">
-                ED-CARD was awarded Champion at the EEConnect Pitching Competition, a faculty-level competition for Electrical Engineering students at 
-                Universiti Malaya. The project was recognized for its strong innovation, clinical relevance, and solid technical execution, highlighting 
-                its potential impact in improving emergency department workflows and patient care.
-            </p>
-        </div>
+        
 
         <!-- Links -->
         <div class="flex space-x-6 mt-10">
