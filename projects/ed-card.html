@@ -289,88 +289,79 @@
             </p>
         </div>
 
-        <!-- Gallery -->
-<!-- Gallery -->
-<div class="mb-10">
-    <h2 class="text-2xl font-semibold mb-4 text-aurora-blue">Project Gallery</h2>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <a href="../images/edphoto.jpeg" class="gallery-item" data-index="0">
-            <img src="../images/edphoto.jpeg" class="w-full h-48 object-cover rounded-lg cursor-pointer">
-        </a>
-        <a href="../images/eeconnect.jpeg" class="gallery-item" data-index="1">
-            <img src="../images/eeconnect.jpeg" class="w-full h-48 object-cover rounded-lg cursor-pointer">
-        </a>
-        <a href="../images/edui.jpeg" class="gallery-item" data-index="2">
-            <img src="../images/edui.jpeg" class="w-full h-48 object-cover rounded-lg cursor-pointer">
-        </a>
-        <a href="../images/edui1.jpeg" class="gallery-item" data-index="3">
-            <img src="../images/edui1.jpeg" class="w-full h-48 object-cover rounded-lg cursor-pointer">
-        </a>
-        <a href="../images/edui2.jpeg" class="gallery-item" data-index="4">
-            <img src="../images/edui2.jpeg" class="w-full h-48 object-cover rounded-lg cursor-pointer">
-        </a>
-        <a href="../images/edui3.jpeg" class="gallery-item" data-index="5">
-            <img src="../images/edui3.jpeg" class="w-full h-48 object-cover rounded-lg cursor-pointer">
-        </a>
-        <a href="../images/edphoto2.jpeg" class="gallery-item" data-index="6">
-            <img src="../images/edphoto2.jpeg" class="w-full h-48 object-cover rounded-lg cursor-pointer">
-        </a>
-        <a href="../images/eeconnect2.jpeg" class="gallery-item" data-index="7">
-            <img src="../images/eeconnect2.jpeg" class="w-full h-48 object-cover rounded-lg cursor-pointer">
-        </a>
-    </div>
-</div>
-
-<!-- Lightbox Modal -->
-<div id="lightbox" class="fixed inset-0 bg-black/80 flex items-center justify-center hidden z-50">
-    <button id="close-lightbox" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
-    <button id="prev-img" class="absolute left-5 text-white text-3xl font-bold">&#10094;</button>
-    <img id="lightbox-img" src="" class="max-h-full max-w-full rounded-lg">
-    <button id="next-img" class="absolute right-5 text-white text-3xl font-bold">&#10095;</button>
-</div>
-
-<script>
-    // Lightbox functionality
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeBtn = document.getElementById('close-lightbox');
-    const prevBtn = document.getElementById('prev-img');
-    const nextBtn = document.getElementById('next-img');
-    const images = document.querySelectorAll('.gallery-item');
-
-    let currentIndex = 0;
-
-    function showLightbox(index) {
-        currentIndex = index;
-        lightboxImg.src = images[index].href;
-        lightbox.classList.remove('hidden');
-    }
-
-    images.forEach((img, idx) => {
-        img.addEventListener('click', (e) => {
-            e.preventDefault(); // prevent navigation
-            showLightbox(idx);
-        });
-    });
-
-    closeBtn.addEventListener('click', () => lightbox.classList.add('hidden'));
-
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        lightboxImg.src = images[currentIndex].href;
-    });
-
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        lightboxImg.src = images[currentIndex].href;
-    });
-
-    // Close lightbox on clicking outside image
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) lightbox.classList.add('hidden');
-    });
-</script>
+        <!-- Project Gallery -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-teal">Project Gallery</h2>
+        
+            <!-- 3-image preview -->
+            <div class="grid grid-cols-3 gap-4 relative">
+                <img src="../images/edphoto.jpeg" class="rounded-lg cursor-pointer gallery-img" data-index="0">
+                <img src="../images/eeconnect.jpeg" class="rounded-lg cursor-pointer gallery-img" data-index="1">
+        
+                <!-- Third image with blur + overlay -->
+                <div class="relative cursor-pointer" data-index="2">
+                    <img src="../images/edui.jpeg" class="rounded-lg filter blur-sm">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-white text-lg font-semibold bg-black/50 px-3 py-1 rounded">View More</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="fixed inset-0 bg-black/80 flex items-center justify-center hidden z-50">
+            <button id="close-lightbox" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+            <button id="prev-img" class="absolute left-5 text-white text-3xl font-bold">&#10094;</button>
+            <img id="lightbox-img" src="" class="max-h-full max-w-full rounded-lg">
+            <button id="next-img" class="absolute right-5 text-white text-3xl font-bold">&#10095;</button>
+        </div>
+        
+        <script>
+            const images = [
+                '../images/edphoto.jpeg',
+                '../images/eeconnect.jpeg',
+                '../images/edui.jpeg',
+                '../images/edui1.jpeg',
+                '../images/edui2.jpeg',
+                '../images/edui3.jpeg'
+            ];
+        
+            const galleryElements = document.querySelectorAll('.gallery-img, .relative[data-index]');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.getElementById('close-lightbox');
+            const prevBtn = document.getElementById('prev-img');
+            const nextBtn = document.getElementById('next-img');
+        
+            let currentIndex = 0;
+        
+            function showLightbox(index) {
+                currentIndex = index;
+                lightboxImg.src = images[index];
+                lightbox.classList.remove('hidden');
+            }
+        
+            galleryElements.forEach((el, idx) => {
+                el.addEventListener('click', () => showLightbox(idx));
+            });
+        
+            closeBtn.addEventListener('click', () => lightbox.classList.add('hidden'));
+        
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                lightboxImg.src = images[currentIndex];
+            });
+        
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                lightboxImg.src = images[currentIndex];
+            });
+        
+            // Close lightbox on clicking outside image
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) lightbox.classList.add('hidden');
+            });
+        </script>
         
 
         <!-- Links -->
