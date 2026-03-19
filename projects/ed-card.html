@@ -280,11 +280,86 @@
         <!-- Gallery -->
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-blue">Project Gallery</h2>
+        
+            <!-- Initial visible images -->
             <div class="grid md:grid-cols-2 gap-4">
-                <img src="../images/edcard1.png" class="rounded-lg">
-                <img src="../images/edcard2.png" class="rounded-lg">
+                <img src="../images/edphoto.jpeg" class="rounded-lg cursor-pointer gallery-img" data-index="0">
+                <img src="../images/eeconnect.jpeg" class="rounded-lg cursor-pointer gallery-img" data-index="1">
+                <img src="../images/edui.jpeg" class="rounded-lg cursor-pointer gallery-img" data-index="2">
+            </div>
+        
+            <!-- Extra images hidden by default -->
+            <div id="extra-gallery" class="grid md:grid-cols-2 gap-4 mt-4 hidden">
+                <img src="../images/edui1.jpeg" class="rounded-lg cursor-pointer gallery-img" data-index="3">
+                <img src="../images/edui2.jpeg" class="rounded-lg cursor-pointer gallery-img" data-index="4">
+                <img src="../images/edui3.jpeg" class="rounded-lg cursor-pointer gallery-img" data-index="5">
+                <img src="../images/edphoto2.jpeg" class="rounded-lg cursor-pointer gallery-img" data-index="6">
+                <img src="../images/eeconnect2.jpeg" class="rounded-lg cursor-pointer gallery-img" data-index="7">
+            </div>
+        
+            <!-- View All / Show Less button -->
+            <div class="text-center mt-4">
+                <button id="gallery-toggle" class="px-6 py-2 bg-gradient-to-r from-aurora-green to-aurora-blue text-dark-bg font-semibold rounded-full hover:shadow-lg transition">
+                    View All
+                </button>
             </div>
         </div>
+        
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="fixed inset-0 bg-black/80 flex items-center justify-center hidden z-50">
+            <button id="close-lightbox" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+            <button id="prev-img" class="absolute left-5 text-white text-3xl font-bold">&#10094;</button>
+            <img id="lightbox-img" src="" class="max-h-full max-w-full rounded-lg">
+            <button id="next-img" class="absolute right-5 text-white text-3xl font-bold">&#10095;</button>
+        </div>
+        
+        <script>
+            // View All / Show Less toggle
+            const toggleBtn = document.getElementById('gallery-toggle');
+            const extraGallery = document.getElementById('extra-gallery');
+        
+            toggleBtn.addEventListener('click', () => {
+                extraGallery.classList.toggle('hidden');
+                toggleBtn.textContent = extraGallery.classList.contains('hidden') ? 'View All' : 'Show Less';
+            });
+        
+            // Lightbox functionality
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.getElementById('close-lightbox');
+            const prevBtn = document.getElementById('prev-img');
+            const nextBtn = document.getElementById('next-img');
+            const images = document.querySelectorAll('.gallery-img');
+        
+            let currentIndex = 0;
+        
+            function showLightbox(index) {
+                currentIndex = index;
+                lightboxImg.src = images[index].src;
+                lightbox.classList.remove('hidden');
+            }
+        
+            images.forEach((img, idx) => {
+                img.addEventListener('click', () => showLightbox(idx));
+            });
+        
+            closeBtn.addEventListener('click', () => lightbox.classList.add('hidden'));
+        
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                lightboxImg.src = images[currentIndex].src;
+            });
+        
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                lightboxImg.src = images[currentIndex].src;
+            });
+        
+            // Close lightbox on clicking outside image
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) lightbox.classList.add('hidden');
+            });
+        </script>
 
         <!-- Links -->
         <div class="flex space-x-6 mt-10">
