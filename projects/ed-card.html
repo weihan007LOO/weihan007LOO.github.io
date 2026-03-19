@@ -294,17 +294,23 @@
             <h2 class="text-2xl font-semibold mb-4 text-aurora-teal">Project Gallery</h2>
         
             <!-- 3-image preview -->
-            <div class="grid grid-cols-3 gap-4 relative">
-                <img src="../images/edphoto.jpeg" class="rounded-lg cursor-pointer gallery-img" data-index="0">
-                <img src="../images/eeconnect.jpeg" class="rounded-lg cursor-pointer gallery-img" data-index="1">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <a href="../images/edphoto.jpeg" class="gallery-item" data-index="0">
+                    <img src="../images/edphoto.jpeg" class="w-full h-48 object-cover rounded-lg cursor-pointer">
+                </a>
+                <a href="../images/eeconnect.jpeg" class="gallery-item" data-index="1">
+                    <img src="../images/eeconnect.jpeg" class="w-full h-48 object-cover rounded-lg cursor-pointer">
+                </a>
         
                 <!-- Third image with blur + overlay -->
-                <div class="relative cursor-pointer" data-index="2">
-                    <img src="../images/edui.jpeg" class="rounded-lg filter blur-sm">
+                <a href="../images/edui.jpeg" class="relative block w-full h-48 cursor-pointer overflow-hidden rounded-lg" data-index="2">
+                    <img src="../images/edui.jpeg" class="w-full h-full object-cover filter blur-sm">
                     <div class="absolute inset-0 flex items-center justify-center">
-                        <span class="text-white text-lg font-semibold bg-black/50 px-3 py-1 rounded">View More</span>
+                        <span class="text-white text-lg font-semibold bg-black/50 px-3 py-1 rounded">
+                            View More
+                        </span>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         
