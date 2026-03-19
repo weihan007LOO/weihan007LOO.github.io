@@ -39,9 +39,10 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-blue">Overview</h2>
             <p class="text-gray-300 leading-relaxed">
-                ED-CARD is a system designed to improve emergency department efficiency by performing 
-                pre-consultation data collection and risk assessment. It aims to reduce waiting time and 
-                assist medical staff in prioritizing patients more effectively.
+                ED-CARD (Emergency Department Pre-Consultation and Risk Detection) is a web-based healthcare system designed to streamline patient intake and 
+                enhance early risk identification in emergency departments. Developed in collaboration with the University Malaya Medical Centre (UMMC), 
+                the system focuses on improving pre-consultation workflows in the green zone by collecting patient complaints and medical history, 
+                generating structured clinical summaries, and assisting healthcare providers with faster, more informed decision-making through AI-supported tools.
             </p>
         </div>
 
@@ -49,8 +50,18 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-purple">Problem</h2>
             <p class="text-gray-300 leading-relaxed">
-                Emergency departments often face overcrowding and delays due to inefficient triage processes. 
-                Patients are assessed manually, leading to inconsistent prioritization and longer waiting times.
+                Emergency departments often face high patient volumes, especially in non-critical (green zone) cases, 
+                leading to inefficiencies in triage and consultation. Key challenges include:
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-gray-300">
+                <li>Incomplete or unstructured patient information during initial intake</li>
+                <li>Time-consuming manual documentation by healthcare staff</li>
+                <li>Risk of missing critical “red-flag” symptoms during early assessment</li>
+                <li>Lack of standardized summaries for quick clinical understanding</li>
+                <li>Increased workload and cognitive burden on medical personnel</li>
+            </ul>
+            <p class="text-gray-300 leading-relaxed">
+                These issues can delay treatment, reduce accuracy in early risk detection, and impact overall patient care quality.
             </p>
         </div>
 
@@ -58,19 +69,60 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-pink">Solution</h2>
             <p class="text-gray-300 leading-relaxed">
-                This system introduces an AI-assisted pre-consultation platform that collects patient symptoms, 
-                analyzes risk levels using machine learning models, and provides early recommendations for triage.
+                ED-CARD addresses these challenges by providing an intelligent pre-consultation system that digitizes and structures patient input before 
+                doctor interaction. The platform leverages Large Language Models (LLMs) combined with rule-based clinical logic to:
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-gray-300">
+                <li>Collect and standardize patient-reported symptoms and history</li>
+                <li>Generate concise, structured clinical summaries for doctors</li>
+                <li>Detect potential high-risk conditions through predefined red-flag rules</li>
+                <li>Support decision-making with AI reasoning grounded in clinical practice guidelines</li>
+            </ul>
+            <p class="text-gray-300 leading-relaxed">
+                This hybrid approach ensures both efficiency and reliability, enhancing workflow while maintaining clinical safety.
             </p>
         </div>
 
         <!-- Features -->
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-green">Key Features</h2>
-            <ul class="list-disc pl-6 text-gray-300 space-y-2">
-                <li>Automated patient data collection</li>
-                <li>AI-based risk detection</li>
-                <li>Real-time triage assistance</li>
-                <li>User-friendly interface for patients</li>
+            <ul class="list-disc pl-6 space-y-4 text-gray-300">
+                <li>
+                    <span class="font-semibold">AI-Assisted Clinical Summarization</span>
+                    <p class="ml-4 text-gray-400">
+                        Automatically converts patient inputs into structured, easy-to-read medical summaries
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">Red-Flag Detection System</span>
+                    <p class="ml-4 text-gray-400">
+                        Rule-based logic combined with AI reasoning to identify potentially serious conditions early
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">Interactive Symptom Input Interface</span>
+                    <p class="ml-4 text-gray-400">
+                        User-friendly front-end with SVG-based body region mapping for precise symptom reporting
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">Retrieval-Augmented Generation (RAG)</span>
+                    <p class="ml-4 text-gray-400">
+                        Integrates medical Clinical Practice Guidelines (CPGs) to ensure accurate and grounded AI responses
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">Structured Clinical Data Handling</span>
+                    <p class="ml-4 text-gray-400">
+                        Organizes patient data into standardized formats for better readability and downstream use
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">Web-Based Architecture</span>
+                    <p class="ml-4 text-gray-400">
+                        Built with React and integrated with SQL databases for scalable and responsive performance
+                    </p>
+                </li>
             </ul>
         </div>
 
