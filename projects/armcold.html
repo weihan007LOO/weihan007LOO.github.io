@@ -157,7 +157,7 @@
 
         <!-- Main Image -->
         <div class="mb-10">
-            <img src="../images/ed-image.jpg" 
+            <img src="../images/coldchain.jpg" 
                  class="rounded-lg w-full h-64 md:h-80 object-cover">
         </div>
 
@@ -165,10 +165,9 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-green">Tech Stack</h2>
             <div class="flex flex-wrap gap-3">
-                <span class="px-3 py-1 bg-aurora-green/20 text-aurora-green rounded">React</span>
-                <span class="px-3 py-1 bg-aurora-blue/20 text-aurora-blue rounded">Node.js</span>
-                <span class="px-3 py-1 bg-aurora-purple/20 text-aurora-purple rounded">Generative AI</span>
-                <span class="px-3 py-1 bg-aurora-pink/20 text-aurora-pink rounded">RAG</span>
+                <span class="px-3 py-1 bg-aurora-green/20 text-aurora-green rounded">Flutter</span>
+                <span class="px-3 py-1 bg-aurora-blue/20 text-aurora-blue rounded">Machine Learning (LSTM)</span>
+                <span class="px-3 py-1 bg-aurora-purple/20 text-aurora-purple rounded">Embedded Circuits</span>
             </div>
         </div>
 
@@ -176,10 +175,10 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-blue">Overview</h2>
             <p class="text-gray-300 leading-relaxed">
-                ED-CARD (Emergency Department Pre-Consultation and Risk Detection) is a web-based healthcare system designed to streamline patient intake and 
-                enhance early risk identification in emergency departments. Developed in collaboration with the University Malaya Medical Centre (UMMC), 
-                the system focuses on improving pre-consultation workflows in the green zone by collecting patient complaints and medical history, 
-                generating structured clinical summaries, and assisting healthcare providers with faster, more informed decision-making through AI-supported tools.
+                ARMCOLD (AI Real-Time Monitoring Cold Chain) is an intelligent cold chain monitoring system developed for the 2025 Medical Devices Grand Design 
+                Challenge. The project focuses on ensuring the safe transportation of temperature-sensitive medical specimens by integrating IoT sensors, 
+                embedded systems, and AI predictive models. The system enables real-time tracking of environmental conditions such as temperature, humidity, and 
+                location, while also providing predictive insights to prevent potential risks during transit.
             </p>
         </div>
 
@@ -187,9 +186,9 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-purple">Awards & Honors</h2>
             <p class="text-gray-300 leading-relaxed">
-                ED-CARD was awarded Champion at the EEConnect Pitching Competition, a faculty-level competition for Electrical Engineering students at 
-                Universiti Malaya. The project was recognized for its strong innovation, clinical relevance, and solid technical execution, highlighting 
-                its potential impact in improving emergency department workflows and patient care.
+                ARMCOLD was awarded 1st Runner-Up at the 2025 Medical Devices Grand Design Challenge, organized by CREST and AMMI at Sains@USM, Penang. The 
+                project was recognized for its innovation in medical device monitoring, strong technical implementation, and its practical relevance in improving 
+                cold chain logistics for healthcare applications.
             </p>
         </div>
 
@@ -197,18 +196,17 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-pink">Problem</h2>
             <p class="text-gray-300 leading-relaxed">
-                Emergency departments often face high patient volumes, especially in non-critical (green zone) cases, 
-                leading to inefficiencies in triage and consultation. Key challenges include:
+                Maintaining the integrity of temperature-sensitive medical specimens during transportation is a critical challenge in healthcare logistics. Key issues include:
             </p>
             <ul class="list-disc list-inside space-y-2 text-gray-300">
-                <li>Incomplete or unstructured patient information during initial intake</li>
-                <li>Time-consuming manual documentation by healthcare staff</li>
-                <li>Risk of missing critical “red-flag” symptoms during early assessment</li>
-                <li>Lack of standardized summaries for quick clinical understanding</li>
-                <li>Increased workload and cognitive burden on medical personnel</li>
+                <li>Lack of real-time visibility into storage conditions during transit</li>
+                <li>Risk of temperature and humidity fluctuations compromising specimen quality</li>
+                <li>Delayed detection of adverse conditions, leading to irreversible damage</li>
+                <li>Limited predictive capability to anticipate and prevent potential failures</li>
+                <li>Inefficient communication between transport personnel and stakeholders</li>
             </ul>
             <p class="text-gray-300 leading-relaxed">
-                These issues can delay treatment, reduce accuracy in early risk detection, and impact overall patient care quality.
+                These challenges can result in compromised samples, increased costs, and potential risks to patient diagnosis and treatment.
             </p>
         </div>
 
@@ -216,17 +214,17 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-green">Solution</h2>
             <p class="text-gray-300 leading-relaxed">
-                ED-CARD addresses these challenges by providing an intelligent pre-consultation system that digitizes and structures patient input before 
-                doctor interaction. The platform leverages Large Language Models (LLMs) combined with rule-based clinical logic to:
+                ARMCOLD provides an integrated hardware-software solution that combines embedded sensors, mobile applications, and machine learning models to 
+                ensure end-to-end cold chain visibility and control. The system continuously monitors environmental conditions and location data, while AI models 
+                analyze trends to predict potential risks before they occur. This enables proactive intervention, ensuring specimen safety and improving 
+                reliability in medical logistics.
             </p>
-            <ul class="list-disc list-inside space-y-2 text-gray-300">
-                <li>Collect and standardize patient-reported symptoms and history</li>
-                <li>Generate concise, structured clinical summaries for doctors</li>
-                <li>Detect potential high-risk conditions through predefined red-flag rules</li>
-                <li>Support decision-making with AI reasoning grounded in clinical practice guidelines</li>
-            </ul>
             <p class="text-gray-300 leading-relaxed">
-                This hybrid approach ensures both efficiency and reliability, enhancing workflow while maintaining clinical safety.
+                To enhance reliability in low-connectivity or rural areas, a Bluetooth-enabled driver mobile application is implemented as a gateway between the 
+                cold box and the cloud system. This allows the driver to receive immediate alerts directly via Bluetooth when abnormal conditions are detected, 
+                even without internet access. The driver app then synchronizes data using available Wi-Fi or mobile data, uploading sensor readings and alert 
+                notifications to a cloud database. These updates are subsequently reflected in a stakeholder dashboard, enabling real-time remote monitoring and 
+                coordinated response across the logistics chain.
             </p>
         </div>
 
@@ -235,39 +233,33 @@
             <h2 class="text-2xl font-semibold mb-4 text-aurora-yellow">Key Features</h2>
             <ul class="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
-                    <span class="font-semibold">AI-Assisted Clinical Summarization</span>
+                    <span class="font-semibold">Real-Time Environmental Monitoring</span>
                     <p class="ml-4 text-gray-400">
-                        Automatically converts patient inputs into structured, easy-to-read medical summaries
+                        Tracks temperature and humidity continuously using embedded sensors
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">Red-Flag Detection System</span>
+                    <span class="font-semibold">GPS Tracking & Map Integration</span>
                     <p class="ml-4 text-gray-400">
-                        Rule-based logic combined with AI reasoning to identify potentially serious conditions early
+                        Provides live location tracking for full visibility during transportation
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">Interactive Symptom Input Interface</span>
+                    <span class="font-semibold">AI-Based Predictive Analytics</span>
                     <p class="ml-4 text-gray-400">
-                        User-friendly front-end with SVG-based body region mapping for precise symptom reporting
+                        Utilizes models such as LSTM and Random Forest to forecast potential risks
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">Retrieval-Augmented Generation (RAG)</span>
+                    <span class="font-semibold">Flexible & Resilient Connectivity</span>
                     <p class="ml-4 text-gray-400">
-                        Integrates medical Clinical Practice Guidelines (CPGs) to ensure accurate and grounded AI responses
+                        Hybrid communication ensures reliable data transfer and real-time alerts
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">Structured Clinical Data Handling</span>
+                    <span class="font-semibold">Embedded System Design</span>
                     <p class="ml-4 text-gray-400">
-                        Organizes patient data into standardized formats for better readability and downstream use
-                    </p>
-                </li>
-                <li>
-                    <span class="font-semibold">Web-Based Architecture</span>
-                    <p class="ml-4 text-gray-400">
-                        Built with React and integrated with SQL databases for scalable and responsive performance
+                        Custom-built circuitry with optimized power management for portability and efficiency
                     </p>
                 </li>
             </ul>
@@ -277,15 +269,12 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-teal">Future Development</h2>
             <p class="text-gray-300 leading-relaxed">
-                Through the development and evaluation of ED-CARD, we identified a key limitation: a lack of continuous monitoring of patient health after 
-                the initial pre-consultation stage. To address this gap, future work will focus on integrating remote photoplethysmography (rPPG), a non-contact 
-                technique that uses a standard camera (e.g., webcam or smartphone) to estimate physiological signals such as heart rate by detecting subtle skin 
-                color changes caused by blood flow. This feature will be embedded into the web platform to enable periodic vital sign monitoring. After LLM-based 
-                symptom analysis, the system will recommend personalized time intervals for rPPG scans, allowing continuous assessment and early detection of 
-                potential deterioration, with timely prompts for patients to seek assistance from nursing staff when necessary. A major challenge lies in 
-                ensuring accurate and reliable signal extraction across diverse real-world conditions, including variations in lighting, skin tone, motion, and 
-                camera quality. Addressing this will require robust signal processing techniques, such as designing adaptive filters and noise reduction pipelines, 
-                while maintaining scalability and a user-friendly interface for practical deployment in healthcare settings.
+                Due to time constraints during the competition, the experiments did not collect sufficient data, which may have caused underfitting or overfitting 
+                in the machine learning models. The initial study focused on how external factors such as surrounding temperature, weather conditions, and 
+                exposure affect the internal temperature of the cold box, but the dataset was limited. Future work will focus on collecting more diverse real-world
+                data to improve model accuracy and reliability. Additionally, the use of a monitoring app by logistics drivers is not yet a common practice, which 
+                may pose adoption challenges. Future development will include real-world testing with drivers, gathering feedback, and refining the app to make it 
+                more user-friendly and practical for daily use.
             </p>
         </div>
 
