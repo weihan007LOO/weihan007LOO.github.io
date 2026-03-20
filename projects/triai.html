@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ED-CARD Project</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'aurora-green': '#00ffaa',
+                        'aurora-blue': '#00aaff',
+                        'aurora-purple': '#aa00ff',
+                        'aurora-pink': '#ff00aa',
+                        'aurora-yellow': '#ffdd00',
+                        'aurora-teal': '#00ffd8',
+                        'dark-bg': '#0a0e1a',
+                        'dark-card': '#1a1f2e',
+                        'dark-border': '#2a2f3e'
+                    },
+                    animation: {
+                        'aurora': 'aurora 15s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'glow': 'glow 2s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        aurora: {
+                            '0%, 100%': {
+                                backgroundPosition: '0% 50%',
+                                backgroundSize: '200% 200%'
+                            },
+                            '50%': {
+                                backgroundPosition: '100% 50%',
+                                backgroundSize: '200% 200%'
+                            }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        glow: {
+                            '0%, 100%': {
+                                boxShadow: '0 0 5px rgba(0, 255, 170, 0.5), 0 0 20px rgba(0, 255, 170, 0.3)'
+                            },
+                            '50%': {
+                                boxShadow: '0 0 20px rgba(0, 170, 255, 0.8), 0 0 40px rgba(0, 170, 255, 0.4)'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Aurora gradient background */
+        .aurora-bg {
+            background: linear-gradient(-45deg, #0a0e1a, #1a0033, #002244, #001a33);
+            background-size: 400% 400%;
+            animation: aurora 15s ease infinite;
+        }
+
+        /* Aurora light effect overlay */
+        .aurora-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            background:
+                radial-gradient(ellipse at top left, rgba(0, 255, 170, 0.15) 0%, transparent 40%),
+                radial-gradient(ellipse at top right, rgba(0, 170, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(ellipse at bottom left, rgba(170, 0, 255, 0.1) 0%, transparent 40%),
+                radial-gradient(ellipse at bottom right, rgba(255, 0, 170, 0.1) 0%, transparent 40%);
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0e1a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #00ffaa, #00aaff);
+            border-radius: 5px;
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #00ffaa 0%, #00aaff 50%, #aa00ff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Card hover effect */
+        .card-hover {
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .card-hover:hover {
+            border-color: #00ffaa;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 170, 0.2);
+        }
+
+        /* Progress bar animation */
+        @keyframes progressAnimation {
+            0% { width: 0%; }
+        }
+
+        .progress-bar {
+            animation: progressAnimation 2s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+
+    <div class="container mx-auto px-6 py-12 max-w-5xl">
+
+        <!-- Back Button -->
+        <a href="../index.html" class="text-aurora-green hover:underline mb-6 inline-block">
+            ← Back to Portfolio
+        </a>
+
+        <!-- Title -->
+        <h1 class="text-4xl font-bold mb-4">ARMCOLD</h1>
+        <p class="text-gray-400 mb-8">
+            AI Real-Time Monitoring Cold Chain
+        </p>
+
+        <!-- Main Image -->
+        <div class="mb-10">
+            <img src="../images/coldchain.jpg" 
+                 class="rounded-lg w-full h-64 md:h-80 object-cover">
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-green">Tech Stack</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-3 py-1 bg-aurora-green/20 text-aurora-green rounded">Flutter</span>
+                <span class="px-3 py-1 bg-aurora-blue/20 text-aurora-blue rounded">Machine Learning (LSTM)</span>
+                <span class="px-3 py-1 bg-aurora-purple/20 text-aurora-purple rounded">Embedded Circuits</span>
+            </div>
+        </div>
+
+        <!-- Project Overview -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-blue">Overview</h2>
+            <p class="text-gray-300 leading-relaxed">
+                ARMCOLD (AI Real-Time Monitoring Cold Chain) is an intelligent cold chain monitoring system developed for the 2025 Medical Devices Grand Design 
+                Challenge. The project focuses on ensuring the safe transportation of temperature-sensitive medical specimens by integrating IoT sensors, 
+                embedded systems, and AI predictive models. The system enables real-time tracking of environmental conditions such as temperature, humidity, and 
+                location, while also providing predictive insights to prevent potential risks during transit.
+            </p>
+        </div>
+
+        <!-- Awards & Honors -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-purple">Awards & Honors</h2>
+            <p class="text-gray-300 leading-relaxed">
+                ARMCOLD was awarded 1st Runner-Up at the 2025 Medical Devices Grand Design Challenge, organized by CREST and AMMI at Sains@USM, Penang. The 
+                project was recognized for its innovation in medical device monitoring, strong technical implementation, and its practical relevance in improving 
+                cold chain logistics for healthcare applications.
+            </p>
+        </div>
+
+        <!-- Problem -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-pink">Problem</h2>
+            <p class="text-gray-300 leading-relaxed">
+                Maintaining the integrity of temperature-sensitive medical specimens during transportation is a critical challenge in healthcare logistics. Key issues include:
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-gray-300">
+                <li>Lack of real-time visibility into storage conditions during transit</li>
+                <li>Risk of temperature and humidity fluctuations compromising specimen quality</li>
+                <li>Delayed detection of adverse conditions, leading to irreversible damage</li>
+                <li>Limited predictive capability to anticipate and prevent potential failures</li>
+                <li>Inefficient communication between transport personnel and stakeholders</li>
+            </ul>
+            <p class="text-gray-300 leading-relaxed">
+                These challenges can result in compromised samples, increased costs, and potential risks to patient diagnosis and treatment.
+            </p>
+        </div>
+
+        <!-- Solution -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-green">Solution</h2>
+            <p class="text-gray-300 leading-relaxed mb-2">
+                ARMCOLD provides an integrated hardware-software solution that combines embedded sensors, mobile applications, and machine learning models to 
+                ensure end-to-end cold chain visibility and control. The system continuously monitors environmental conditions and location data, while AI models 
+                analyze trends to predict potential risks before they occur. This enables proactive intervention, ensuring specimen safety and improving 
+                reliability in medical logistics.
+            </p>
+            <p class="text-gray-300 leading-relaxed">
+                To enhance reliability in low-connectivity or rural areas, a Bluetooth-enabled driver mobile application is implemented as a gateway between the 
+                cold box and the cloud system. This allows the driver to receive immediate alerts directly via Bluetooth when abnormal conditions are detected, 
+                even without internet access. The driver app then synchronizes data using available Wi-Fi or mobile data, uploading sensor readings and alert 
+                notifications to a cloud database. These updates are subsequently reflected in a stakeholder dashboard, enabling real-time remote monitoring and 
+                coordinated response across the logistics chain.
+            </p>
+        </div>
+
+        <!-- Features -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-yellow">Key Features</h2>
+            <ul class="list-disc pl-6 space-y-4 text-gray-300">
+                <li>
+                    <span class="font-semibold">Real-Time Environmental Monitoring</span>
+                    <p class="ml-4 text-gray-400">
+                        Tracks temperature and humidity continuously using embedded sensors
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">GPS Tracking & Map Integration</span>
+                    <p class="ml-4 text-gray-400">
+                        Provides live location tracking for full visibility during transportation
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">AI-Based Predictive Analytics</span>
+                    <p class="ml-4 text-gray-400">
+                        Utilizes models such as LSTM and Random Forest to forecast potential risks
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">Flexible & Resilient Connectivity</span>
+                    <p class="ml-4 text-gray-400">
+                        Hybrid communication ensures reliable data transfer and real-time alerts
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">Embedded System Design</span>
+                    <p class="ml-4 text-gray-400">
+                        Custom-built circuitry with optimized power management for portability and efficiency
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Current Progress -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-teal">Future Development</h2>
+            <p class="text-gray-300 leading-relaxed">
+                Due to time constraints during the competition, the experiments did not collect sufficient data, which may have caused underfitting or overfitting 
+                in the machine learning models. The initial study focused on how external factors such as surrounding temperature, weather conditions, and 
+                exposure affect the internal temperature of the cold box, but the dataset was limited. Future work will focus on collecting more diverse real-world
+                data to improve model accuracy and reliability. Additionally, the use of a monitoring app by logistics drivers is not yet a common practice, which 
+                may pose adoption challenges. Future development will include real-world testing with drivers, gathering feedback, and refining the app to make it 
+                more user-friendly and practical for daily use.
+            </p>
+        </div>
+
+        <!-- Gallery Preview -->
+        <div class="mb-10">
+        <h2 class="text-2xl font-semibold mb-4 text-aurora-blue">Project Gallery</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <!-- Normal images -->
+            <img src="../images/armcoldwin1.jpeg" class="gallery-img w-full h-48 object-cover rounded-lg cursor-pointer" data-index="0">
+            <img src="../images/armcold1.jpeg" class="gallery-img w-full h-48 object-cover rounded-lg cursor-pointer" data-index="1">
+        
+            <!-- Third image with blur + overlay -->
+            <div class="relative gallery-img w-full h-48 cursor-pointer overflow-hidden rounded-lg" data-index="2">
+                <img src="../images/armcold3.jpeg" class="w-full h-full object-cover filter" style="filter: blur(2px);">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-white text-lg font-semibold bg-black/50 px-3 py-1 rounded">
+                        View More
+                    </span>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="fixed inset-0 bg-black/80 flex items-center justify-center hidden z-50">
+            <button id="close-lightbox" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+            <button id="prev-img" class="absolute left-5 text-white text-3xl font-bold z-50">&#10094;</button>
+            <img id="lightbox-img" src="" class="max-h-full max-w-full rounded-lg">
+            <button id="next-img" class="absolute right-5 text-white text-3xl font-bold z-50">&#10095;</button>
+        </div>
+        
+        <script>
+            const images = [
+                '../images/armcoldwin1.jpeg',
+                '../images/armcold1.jpeg',
+                '../images/armcold3.jpeg',
+                '../images/armcoldui2.jpeg',
+                '../images/armcoldui3.jpeg',
+                '../images/armcoldui4.jpeg',
+                '../images/armcoldui5.jpeg',
+                '../images/armcoldui6.jpeg',
+                '../images/armcoldui7.jpeg',
+                '../images/armcoldui1.jpeg',
+                '../images/armcoldwin.jpeg',
+                '../images/armcoldwin2.jpeg',
+            ];
+        
+            const galleryElements = document.querySelectorAll('.gallery-img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.getElementById('close-lightbox');
+            const prevBtn = document.getElementById('prev-img');
+            const nextBtn = document.getElementById('next-img');
+        
+            let currentIndex = 0;
+        
+            function showLightbox(index) {
+                currentIndex = index;
+                lightboxImg.src = images[index];
+                lightbox.classList.remove('hidden');
+            }
+        
+            galleryElements.forEach((el) => {
+                el.addEventListener('click', () => showLightbox(parseInt(el.dataset.index)));
+            });
+        
+            closeBtn.addEventListener('click', () => lightbox.classList.add('hidden'));
+        
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                lightboxImg.src = images[currentIndex];
+            });
+        
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex + 1) % images.length;
+                lightboxImg.src = images[currentIndex];
+            });
+        
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) lightbox.classList.add('hidden');
+            });
+        </script>
+        
+
+        <!-- Links -->
+        <div class="flex space-x-6 mt-10">
+            <a href="#" class="px-6 py-3 bg-aurora-green text-black rounded hover:scale-105 transition">
+                Live Demo
+            </a>
+            <a href="https://github.com/weihan007LOO/armcold007" class="px-6 py-3 border border-aurora-green rounded hover:bg-aurora-green hover:text-black transition">
+                GitHub Repo
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
