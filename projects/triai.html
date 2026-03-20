@@ -157,7 +157,7 @@
 
         <!-- Main Image -->
         <div class="mb-10">
-            <img src="../images/coldchain.jpg" 
+            <img src="../images/triai1.jpg" 
                  class="rounded-lg w-full h-64 md:h-80 object-cover">
         </div>
 
@@ -165,9 +165,8 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-green">Tech Stack</h2>
             <div class="flex flex-wrap gap-3">
-                <span class="px-3 py-1 bg-aurora-green/20 text-aurora-green rounded">Flutter</span>
-                <span class="px-3 py-1 bg-aurora-blue/20 text-aurora-blue rounded">Machine Learning (LSTM)</span>
-                <span class="px-3 py-1 bg-aurora-purple/20 text-aurora-purple rounded">Embedded Circuits</span>
+                <span class="px-3 py-1 bg-aurora-green/20 text-aurora-green rounded">Generative AI</span>
+                <span class="px-3 py-1 bg-aurora-blue/20 text-aurora-blue rounded">HTML</span>
             </div>
         </div>
 
@@ -175,10 +174,9 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-blue">Overview</h2>
             <p class="text-gray-300 leading-relaxed">
-                ARMCOLD (AI Real-Time Monitoring Cold Chain) is an intelligent cold chain monitoring system developed for the 2025 Medical Devices Grand Design 
-                Challenge. The project focuses on ensuring the safe transportation of temperature-sensitive medical specimens by integrating IoT sensors, 
-                embedded systems, and AI predictive models. The system enables real-time tracking of environmental conditions such as temperature, humidity, and 
-                location, while also providing predictive insights to prevent potential risks during transit.
+                TRIAI (Next-Generation Hospital Triage System) is an AI-powered kiosk designed to improve the efficiency and accuracy of emergency department 
+                triage. Developed during the AI in Medicine Bootcamp & Hackathon 2025, the system collects patient inputs, generates structured medical summaries, 
+                and assigns risk levels based on the Modified Early Warning Score (MEWS) to support faster and more informed clinical decision-making.
             </p>
         </div>
 
@@ -186,9 +184,8 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-purple">Awards & Honors</h2>
             <p class="text-gray-300 leading-relaxed">
-                ARMCOLD was awarded 1st Runner-Up at the 2025 Medical Devices Grand Design Challenge, organized by CREST and AMMI at Sains@USM, Penang. The 
-                project was recognized for its innovation in medical device monitoring, strong technical implementation, and its practical relevance in improving 
-                cold chain logistics for healthcare applications.
+                TRIAI was recognized as a Top 5 Finalist (4th Place) at the AI in Medicine Bootcamp & Hackathon 2025, organized by MESA and PEKOM Universiti Malaya 
+                in collaboration with MOSTI. The project stood out for its innovative application of AI in enhancing hospital triage workflows and healthcare delivery.
             </p>
         </div>
 
@@ -196,35 +193,32 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-pink">Problem</h2>
             <p class="text-gray-300 leading-relaxed">
-                Maintaining the integrity of temperature-sensitive medical specimens during transportation is a critical challenge in healthcare logistics. Key issues include:
+                Emergency departments often face inefficiencies in triage due to:
             </p>
             <ul class="list-disc list-inside space-y-2 text-gray-300">
-                <li>Lack of real-time visibility into storage conditions during transit</li>
-                <li>Risk of temperature and humidity fluctuations compromising specimen quality</li>
-                <li>Delayed detection of adverse conditions, leading to irreversible damage</li>
-                <li>Limited predictive capability to anticipate and prevent potential failures</li>
-                <li>Inefficient communication between transport personnel and stakeholders</li>
+                <li>High patient volume and limited medical staff</li>
+                <li>Time-consuming manual data collection and documentation</li>
+                <li>Inconsistent risk assessment during initial screening</li>
+                <li>Lack of structured and standardized patient summaries</li>
+                <li>Delays in identifying high-risk patients</li>
             </ul>
             <p class="text-gray-300 leading-relaxed">
-                These challenges can result in compromised samples, increased costs, and potential risks to patient diagnosis and treatment.
+                These challenges can lead to longer waiting times and increased risk of delayed critical care.
             </p>
         </div>
 
         <!-- Solution -->
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-green">Solution</h2>
-            <p class="text-gray-300 leading-relaxed mb-2">
-                ARMCOLD provides an integrated hardware-software solution that combines embedded sensors, mobile applications, and machine learning models to 
-                ensure end-to-end cold chain visibility and control. The system continuously monitors environmental conditions and location data, while AI models 
-                analyze trends to predict potential risks before they occur. This enables proactive intervention, ensuring specimen safety and improving 
-                reliability in medical logistics.
-            </p>
             <p class="text-gray-300 leading-relaxed">
-                To enhance reliability in low-connectivity or rural areas, a Bluetooth-enabled driver mobile application is implemented as a gateway between the 
-                cold box and the cloud system. This allows the driver to receive immediate alerts directly via Bluetooth when abnormal conditions are detected, 
-                even without internet access. The driver app then synchronizes data using available Wi-Fi or mobile data, uploading sensor readings and alert 
-                notifications to a cloud database. These updates are subsequently reflected in a stakeholder dashboard, enabling real-time remote monitoring and 
-                coordinated response across the logistics chain.
+                TRIAI introduces an AI-powered self-service kiosk that automates the initial triage process. Patients can provide inputs through multilingual 
+                support using text or voice, improving accessibility for diverse users. The system leverages LLMs to dynamically generate triage questions based 
+                on the patient’s chief complaint, selecting from a predefined question bank to ensure relevant, non-repetitive, and clinically important questions 
+                are asked. This structured questioning helps identify potential high-risk conditions early. In addition, patients can provide free-text 
+                descriptions of their condition, allowing them to explain situations such as how an injury occurred, which enhances the AI’s ability to generate 
+                accurate medical summaries and risk assessments. The system then produces structured summaries, assigns risk levels using MEWS-based scoring, and 
+                generates a colour-coded ticket to guide patients to the appropriate treatment zone, enabling faster, more consistent triage while reducing the 
+                workload on healthcare staff.
             </p>
         </div>
 
@@ -233,33 +227,45 @@
             <h2 class="text-2xl font-semibold mb-4 text-aurora-yellow">Key Features</h2>
             <ul class="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
-                    <span class="font-semibold">Real-Time Environmental Monitoring</span>
+                    <span class="font-semibold">Dynamic LLM-Driven Questioning</span>
                     <p class="ml-4 text-gray-400">
-                        Tracks temperature and humidity continuously using embedded sensors
+                        Generates relevant triage questions based on chief complaint using a predefined question bank, avoiding repetition and prioritizing critical information
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">GPS Tracking & Map Integration</span>
+                    <span class="font-semibold">AI-Generated Medical Summaries</span>
                     <p class="ml-4 text-gray-400">
-                        Provides live location tracking for full visibility during transportation
+                        Converts structured and unstructured inputs into concise clinical summaries
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">AI-Based Predictive Analytics</span>
+                    <span class="font-semibold">Real-Time Data Flow to Dashboard</span>
                     <p class="ml-4 text-gray-400">
-                        Utilizes models such as LSTM and Random Forest to forecast potential risks
+                        Seamless integration with backend systems for monitoring and decision-making
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">Flexible & Resilient Connectivity</span>
+                    <span class="font-semibold">Free-Text Patient Input</span>
                     <p class="ml-4 text-gray-400">
-                        Hybrid communication ensures reliable data transfer and real-time alerts
+                        Allows patients to describe their condition in detail, improving AI understanding and analysis
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">Embedded System Design</span>
+                    <span class="font-semibold">MEWS-Based Risk Scoring</span>
                     <p class="ml-4 text-gray-400">
-                        Custom-built circuitry with optimized power management for portability and efficiency
+                        Automatically assigns patient risk levels for prioritization
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">Voice & Text Input Support</span>
+                    <p class="ml-4 text-gray-400">
+                        Enables flexible and user-friendly interaction
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">Multilingual Support</span>
+                    <p class="ml-4 text-gray-400">
+                        Supports multiple languages for better accessibility and inclusivity
                     </p>
                 </li>
             </ul>
@@ -269,12 +275,11 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-teal">Future Development</h2>
             <p class="text-gray-300 leading-relaxed">
-                Due to time constraints during the competition, the experiments did not collect sufficient data, which may have caused underfitting or overfitting 
-                in the machine learning models. The initial study focused on how external factors such as surrounding temperature, weather conditions, and 
-                exposure affect the internal temperature of the cold box, but the dataset was limited. Future work will focus on collecting more diverse real-world
-                data to improve model accuracy and reliability. Additionally, the use of a monitoring app by logistics drivers is not yet a common practice, which 
-                may pose adoption challenges. Future development will include real-world testing with drivers, gathering feedback, and refining the app to make it 
-                more user-friendly and practical for daily use.
+                Currently, the LLM is designed to align with MEWS-based scoring for risk assessment. Future development will focus on fine-tuning the model using 
+                real clinical historical data to better adapt to local patient populations and improve accuracy. In addition, the system interface will be refined 
+                through user testing to enhance usability and accessibility. Improvements in voice input accuracy, particularly for multiple languages, will also 
+                be prioritized. Finally, further testing with medical assistants and healthcare staff will be conducted to gather feedback and enhance system 
+                functionality, ensuring better integration into real clinical workflows.
             </p>
         </div>
 
@@ -283,12 +288,12 @@
         <h2 class="text-2xl font-semibold mb-4 text-aurora-blue">Project Gallery</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <!-- Normal images -->
-            <img src="../images/armcoldwin1.jpeg" class="gallery-img w-full h-48 object-cover rounded-lg cursor-pointer" data-index="0">
-            <img src="../images/armcold1.jpeg" class="gallery-img w-full h-48 object-cover rounded-lg cursor-pointer" data-index="1">
+            <img src="../images/triaiwin.jpeg" class="gallery-img w-full h-48 object-cover rounded-lg cursor-pointer" data-index="0">
+            <img src="../images/triaiwin1.jpeg" class="gallery-img w-full h-48 object-cover rounded-lg cursor-pointer" data-index="1">
         
             <!-- Third image with blur + overlay -->
             <div class="relative gallery-img w-full h-48 cursor-pointer overflow-hidden rounded-lg" data-index="2">
-                <img src="../images/armcold3.jpeg" class="w-full h-full object-cover filter" style="filter: blur(2px);">
+                <img src="../images/triaiui.png" class="w-full h-full object-cover filter" style="filter: blur(2px);">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-white text-lg font-semibold bg-black/50 px-3 py-1 rounded">
                         View More
@@ -308,18 +313,17 @@
         
         <script>
             const images = [
-                '../images/armcoldwin1.jpeg',
-                '../images/armcold1.jpeg',
-                '../images/armcold3.jpeg',
-                '../images/armcoldui2.jpeg',
-                '../images/armcoldui3.jpeg',
-                '../images/armcoldui4.jpeg',
-                '../images/armcoldui5.jpeg',
-                '../images/armcoldui6.jpeg',
-                '../images/armcoldui7.jpeg',
-                '../images/armcoldui1.jpeg',
-                '../images/armcoldwin.jpeg',
-                '../images/armcoldwin2.jpeg',
+                '../images/triaiwin.jpeg',
+                '../images/triaiwin1.jpeg',
+                '../images/triaiui.png',
+                '../images/triaiui1.png',
+                '../images/triaiui2.png',
+                '../images/triaiui3.png',
+                '../images/triaiui4.png',
+                '../images/triaiui5.png',
+                '../images/triaiui6.png',
+                '../images/triaiui7.png',
+                '../images/triaiwin2.jpeg',
             ];
         
             const galleryElements = document.querySelectorAll('.gallery-img');
