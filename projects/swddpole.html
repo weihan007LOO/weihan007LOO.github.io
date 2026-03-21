@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWDD Pole</title>
+    <title>SWDD Pole Project</title>
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -150,14 +150,14 @@
         </a>
 
         <!-- Title -->
-        <h1 class="text-4xl font-bold mb-4">ED-CARD</h1>
+        <h1 class="text-4xl font-bold mb-4">SWDD Pole</h1>
         <p class="text-gray-400 mb-8">
-            Emergency Department Pre-Consultation and Risk Detection System
+            Smart Wildlife Detection & Deterrent Pole System
         </p>
 
         <!-- Main Image -->
         <div class="mb-10">
-            <img src="../images/ed-image.jpg" 
+            <img src="../images/swdd4.png" 
                  class="rounded-lg w-full h-64 md:h-80 object-cover">
         </div>
 
@@ -165,10 +165,10 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-green">Tech Stack</h2>
             <div class="flex flex-wrap gap-3">
-                <span class="px-3 py-1 bg-aurora-green/20 text-aurora-green rounded">React</span>
-                <span class="px-3 py-1 bg-aurora-blue/20 text-aurora-blue rounded">Node.js</span>
-                <span class="px-3 py-1 bg-aurora-purple/20 text-aurora-purple rounded">Generative AI</span>
-                <span class="px-3 py-1 bg-aurora-pink/20 text-aurora-pink rounded">RAG</span>
+                <span class="px-3 py-1 bg-aurora-green/20 text-aurora-green rounded">Flutter</span>
+                <span class="px-3 py-1 bg-aurora-blue/20 text-aurora-blue rounded">YOLO</span>
+                <span class="px-3 py-1 bg-aurora-purple/20 text-aurora-purple rounded">Firebase</span>
+                <span class="px-3 py-1 bg-aurora-pink/20 text-aurora-pink rounded">Embedded circuits</span>
             </div>
         </div>
 
@@ -176,10 +176,10 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-blue">Overview</h2>
             <p class="text-gray-300 leading-relaxed">
-                ED-CARD (Emergency Department Pre-Consultation and Risk Detection) is a web-based healthcare system designed to streamline patient intake and 
-                enhance early risk identification in emergency departments. Developed in collaboration with the University Malaya Medical Centre (UMMC), 
-                the system focuses on improving pre-consultation workflows in the green zone by collecting patient complaints and medical history, 
-                generating structured clinical summaries, and assisting healthcare providers with faster, more informed decision-making through AI-supported tools.
+                The Smart Wildlife Detection & Deterrent Pole (SWDD Pole) is an AI-powered roadside safety system designed to reduce wildlife-vehicle collisions. 
+                Developed for the 2025 Shell Selamat Sampai Varsity Challenge (SSVC), the system integrates real-time animal detection with automated deterrent 
+                mechanisms and driver alerts. By combining computer vision, embedded systems, and mobile connectivity, the solution enhances both wildlife 
+                protection and road safety.
             </p>
         </div>
 
@@ -187,9 +187,8 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-purple">Awards & Honors</h2>
             <p class="text-gray-300 leading-relaxed">
-                ED-CARD was awarded Champion at the EEConnect Pitching Competition, a faculty-level competition for Electrical Engineering students at 
-                Universiti Malaya. The project was recognized for its strong innovation, clinical relevance, and solid technical execution, highlighting 
-                its potential impact in improving emergency department workflows and patient care.
+                SWDD Pole was recognized as a Top 20 Finalist at the 2025 Shell Selamat Sampai Varsity Challenge (SSVC), organized by Shell Malaysia. 
+                The project was acknowledged for its innovative approach to addressing road safety and wildlife conservation challenges.
             </p>
         </div>
 
@@ -197,36 +196,33 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-pink">Problem</h2>
             <p class="text-gray-300 leading-relaxed">
-                Emergency departments often face high patient volumes, especially in non-critical (green zone) cases, 
-                leading to inefficiencies in triage and consultation. Key challenges include:
+                Wildlife-vehicle collisions are a significant concern in areas near forests and highways, leading to:
             </p>
             <ul class="list-disc list-inside space-y-2 text-gray-300">
-                <li>Incomplete or unstructured patient information during initial intake</li>
-                <li>Time-consuming manual documentation by healthcare staff</li>
-                <li>Risk of missing critical “red-flag” symptoms during early assessment</li>
-                <li>Lack of standardized summaries for quick clinical understanding</li>
-                <li>Increased workload and cognitive burden on medical personnel</li>
+                <li>Danger to drivers and passengers</li>
+                <li>Injury or death of wildlife, especially large animals like elephants</li>
+                <li>Lack of early warning systems for drivers</li>
+                <li>Limited real-time monitoring of animal movement near roads</li>
+                <li>Ineffective or non-adaptive deterrent methods</li>
             </ul>
             <p class="text-gray-300 leading-relaxed">
-                These issues can delay treatment, reduce accuracy in early risk detection, and impact overall patient care quality.
+                These issues highlight the need for an intelligent, real-time system to detect and prevent potential collisions.
             </p>
         </div>
 
         <!-- Solution -->
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-green">Solution</h2>
-            <p class="text-gray-300 leading-relaxed">
-                ED-CARD addresses these challenges by providing an intelligent pre-consultation system that digitizes and structures patient input before 
-                doctor interaction. The platform leverages Large Language Models (LLMs) combined with rule-based clinical logic to:
+            <p class="text-gray-300 leading-relaxed mb-2">
+                SWDD Pole introduces a dual-pole smart system that combines AI-based animal detection with automated deterrent and alert mechanisms. The first pole, 
+                placed near forest edges, uses a YOLOv5-based object detection model trained on both day and night elephant datasets to detect approaching wildlife. 
+                It utilizes a combination of PIR sensors and light sensors to activate the appropriate camera (Astra camera for daytime and Pi camera for nighttime), 
+                improving power efficiency by ensuring the system only runs when necessary.
             </p>
-            <ul class="list-disc list-inside space-y-2 text-gray-300">
-                <li>Collect and standardize patient-reported symptoms and history</li>
-                <li>Generate concise, structured clinical summaries for doctors</li>
-                <li>Detect potential high-risk conditions through predefined red-flag rules</li>
-                <li>Support decision-making with AI reasoning grounded in clinical practice guidelines</li>
-            </ul>
             <p class="text-gray-300 leading-relaxed">
-                This hybrid approach ensures both efficiency and reliability, enhancing workflow while maintaining clinical safety.
+                Once an animal is detected, the system triggers the second pole located near the roadside. This pole emits ultrasonic waves to deter animals from 
+                approaching the road and activates an LED panel to warn nearby drivers. Simultaneously, the system uploads detection data to a cloud database, 
+                which is integrated with a map-based mobile application to provide real-time alerts to drivers, enhancing situational awareness and safety.
             </p>
         </div>
 
@@ -235,39 +231,45 @@
             <h2 class="text-2xl font-semibold mb-4 text-aurora-yellow">Key Features</h2>
             <ul class="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
-                    <span class="font-semibold">AI-Assisted Clinical Summarization</span>
+                    <span class="font-semibold">AI-Based Wildlife Detection (YOLOv5)</span>
                     <p class="ml-4 text-gray-400">
-                        Automatically converts patient inputs into structured, easy-to-read medical summaries
+                        Detects elephants using trained models for both day and night conditions
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">Red-Flag Detection System</span>
+                    <span class="font-semibold">Dual-Pole System Architecture</span>
                     <p class="ml-4 text-gray-400">
-                        Rule-based logic combined with AI reasoning to identify potentially serious conditions early
+                        Separates detection (forest side) and deterrent/alert (roadside) functions
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">Interactive Symptom Input Interface</span>
+                    <span class="font-semibold">Adaptive Camera Switching</span>
                     <p class="ml-4 text-gray-400">
-                        User-friendly front-end with SVG-based body region mapping for precise symptom reporting
+                        Uses light sensors to switch between Astra cam (day) and Pi cam (night)
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">Retrieval-Augmented Generation (RAG)</span>
+                    <span class="font-semibold">Motion-Triggered Activation</span>
                     <p class="ml-4 text-gray-400">
-                        Integrates medical Clinical Practice Guidelines (CPGs) to ensure accurate and grounded AI responses
+                        PIR sensors activate the system only when movement is detected, improving power efficiency
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">Structured Clinical Data Handling</span>
+                    <span class="font-semibold">Ultrasonic Deterrent Mechanism</span>
                     <p class="ml-4 text-gray-400">
-                        Organizes patient data into standardized formats for better readability and downstream use
+                        Emits sound waves to prevent animals from approaching the road
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">Web-Based Architecture</span>
+                    <span class="font-semibold">Driver Alert System (LED Panel)</span>
                     <p class="ml-4 text-gray-400">
-                        Built with React and integrated with SQL databases for scalable and responsive performance
+                        Provides immediate visual warnings to drivers
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">Real-Time Cloud & Map Integration</span>
+                    <p class="ml-4 text-gray-400">
+                        Uploads detection data to Firebase and displays alerts on a map-based mobile app
                     </p>
                 </li>
             </ul>
@@ -277,15 +279,10 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-teal">Future Development</h2>
             <p class="text-gray-300 leading-relaxed">
-                Through the development and evaluation of ED-CARD, we identified a key limitation: a lack of continuous monitoring of patient health after 
-                the initial pre-consultation stage. To address this gap, future work will focus on integrating remote photoplethysmography (rPPG), a non-contact 
-                technique that uses a standard camera (e.g., webcam or smartphone) to estimate physiological signals such as heart rate by detecting subtle skin 
-                color changes caused by blood flow. This feature will be embedded into the web platform to enable periodic vital sign monitoring. After LLM-based 
-                symptom analysis, the system will recommend personalized time intervals for rPPG scans, allowing continuous assessment and early detection of 
-                potential deterioration, with timely prompts for patients to seek assistance from nursing staff when necessary. A major challenge lies in 
-                ensuring accurate and reliable signal extraction across diverse real-world conditions, including variations in lighting, skin tone, motion, and 
-                camera quality. Addressing this will require robust signal processing techniques, such as designing adaptive filters and noise reduction pipelines, 
-                while maintaining scalability and a user-friendly interface for practical deployment in healthcare settings.
+                Due to time constraints during the competition, the model was trained specifically for elephant detection. Future development will focus on 
+                expanding the dataset and training the model to detect a wider range of wildlife, particularly endangered and high-risk animals. Enhancements in 
+                hardware durability and energy efficiency will also be explored for long-term outdoor deployment. In addition, further testing in real-world 
+                conditions will be conducted to optimize the effectiveness of ultrasonic deterrents and improve the reliability of real-time alerts for drivers.
             </p>
         </div>
 
@@ -294,12 +291,12 @@
             <h2 class="text-2xl font-semibold mb-4 text-aurora-blue">Project Gallery</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <!-- Normal images -->
-            <img src="../images/edphoto.jpeg" class="gallery-img w-full h-48 object-cover rounded-lg cursor-pointer" data-index="0">
-            <img src="../images/eeconnect.jpeg" class="gallery-img w-full h-48 object-cover rounded-lg cursor-pointer" data-index="1">
+            <img src="../images/swdd1.png" class="gallery-img w-full h-48 object-cover rounded-lg cursor-pointer" data-index="0">
+            <img src="../images/swdd3.jpeg" class="gallery-img w-full h-48 object-cover rounded-lg cursor-pointer" data-index="1">
         
             <!-- Third image with blur + overlay -->
             <div class="relative gallery-img w-full h-48 cursor-pointer overflow-hidden rounded-lg" data-index="2">
-                <img src="../images/edui3.jpeg" class="w-full h-full object-cover filter" style="filter: blur(2px);">
+                <img src="../images/swddui.jpeg" class="w-full h-full object-cover filter" style="filter: blur(2px);">
                 <div class="absolute inset-0 flex items-center justify-center">
                     <span class="text-white text-lg font-semibold bg-black/50 px-3 py-1 rounded">
                         View More
@@ -319,14 +316,13 @@
         
         <script>
             const images = [
-                '../images/edphoto.jpeg',
-                '../images/eeconnect.jpeg',
-                '../images/edui3.jpeg',
-                '../images/edui2.jpeg',
-                '../images/edui1.jpeg',
-                '../images/edui.jpeg',
-                '../images/eeconnect2.jpeg',
-                '../images/edphoto2.jpeg',
+                '../images/swdd1.png',
+                '../images/swdd3.jpeg',
+                '../images/swddui.jpeg',
+                '../images/swddui1.jpeg',
+                '../images/swddui2.jpeg',
+                '../images/swdd2.png',
+                '../images/swdd5.png',
             ];
         
             const galleryElements = document.querySelectorAll('.gallery-img');
