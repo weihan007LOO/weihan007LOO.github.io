@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySampahHero Project</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'aurora-green': '#00ffaa',
+                        'aurora-blue': '#00aaff',
+                        'aurora-purple': '#aa00ff',
+                        'aurora-pink': '#ff00aa',
+                        'aurora-yellow': '#ffdd00',
+                        'aurora-teal': '#00ffd8',
+                        'dark-bg': '#0a0e1a',
+                        'dark-card': '#1a1f2e',
+                        'dark-border': '#2a2f3e'
+                    },
+                    animation: {
+                        'aurora': 'aurora 15s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'glow': 'glow 2s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        aurora: {
+                            '0%, 100%': {
+                                backgroundPosition: '0% 50%',
+                                backgroundSize: '200% 200%'
+                            },
+                            '50%': {
+                                backgroundPosition: '100% 50%',
+                                backgroundSize: '200% 200%'
+                            }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        glow: {
+                            '0%, 100%': {
+                                boxShadow: '0 0 5px rgba(0, 255, 170, 0.5), 0 0 20px rgba(0, 255, 170, 0.3)'
+                            },
+                            '50%': {
+                                boxShadow: '0 0 20px rgba(0, 170, 255, 0.8), 0 0 40px rgba(0, 170, 255, 0.4)'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Aurora gradient background */
+        .aurora-bg {
+            background: linear-gradient(-45deg, #0a0e1a, #1a0033, #002244, #001a33);
+            background-size: 400% 400%;
+            animation: aurora 15s ease infinite;
+        }
+
+        /* Aurora light effect overlay */
+        .aurora-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            background:
+                radial-gradient(ellipse at top left, rgba(0, 255, 170, 0.15) 0%, transparent 40%),
+                radial-gradient(ellipse at top right, rgba(0, 170, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(ellipse at bottom left, rgba(170, 0, 255, 0.1) 0%, transparent 40%),
+                radial-gradient(ellipse at bottom right, rgba(255, 0, 170, 0.1) 0%, transparent 40%);
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0e1a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #00ffaa, #00aaff);
+            border-radius: 5px;
+        }
+
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(135deg, #00ffaa 0%, #00aaff 50%, #aa00ff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Card hover effect */
+        .card-hover {
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .card-hover:hover {
+            border-color: #00ffaa;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 170, 0.2);
+        }
+
+        /* Progress bar animation */
+        @keyframes progressAnimation {
+            0% { width: 0%; }
+        }
+
+        .progress-bar {
+            animation: progressAnimation 2s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+
+    <div class="container mx-auto px-6 py-12 max-w-5xl">
+
+        <!-- Back Button -->
+        <a href="../index.html" class="text-aurora-green hover:underline mb-6 inline-block">
+            ← Back to Portfolio
+        </a>
+
+        <!-- Title -->
+        <h1 class="text-4xl font-bold mb-4">ED-CARD</h1>
+        <p class="text-gray-400 mb-8">
+            Emergency Department Pre-Consultation and Risk Detection System
+        </p>
+
+        <!-- Main Image -->
+        <div class="mb-10">
+            <img src="../images/ed-image.jpg" 
+                 class="rounded-lg w-full h-64 md:h-80 object-cover">
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-green">Tech Stack</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-3 py-1 bg-aurora-green/20 text-aurora-green rounded">React</span>
+                <span class="px-3 py-1 bg-aurora-blue/20 text-aurora-blue rounded">Node.js</span>
+                <span class="px-3 py-1 bg-aurora-purple/20 text-aurora-purple rounded">Generative AI</span>
+                <span class="px-3 py-1 bg-aurora-pink/20 text-aurora-pink rounded">RAG</span>
+            </div>
+        </div>
+
+        <!-- Project Overview -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-blue">Overview</h2>
+            <p class="text-gray-300 leading-relaxed">
+                ED-CARD (Emergency Department Pre-Consultation and Risk Detection) is a web-based healthcare system designed to streamline patient intake and 
+                enhance early risk identification in emergency departments. Developed in collaboration with the University Malaya Medical Centre (UMMC), 
+                the system focuses on improving pre-consultation workflows in the green zone by collecting patient complaints and medical history, 
+                generating structured clinical summaries, and assisting healthcare providers with faster, more informed decision-making through AI-supported tools.
+            </p>
+        </div>
+
+        <!-- Awards & Honors -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-purple">Awards & Honors</h2>
+            <p class="text-gray-300 leading-relaxed">
+                ED-CARD was awarded Champion at the EEConnect Pitching Competition, a faculty-level competition for Electrical Engineering students at 
+                Universiti Malaya. The project was recognized for its strong innovation, clinical relevance, and solid technical execution, highlighting 
+                its potential impact in improving emergency department workflows and patient care.
+            </p>
+        </div>
+
+        <!-- Problem -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-pink">Problem</h2>
+            <p class="text-gray-300 leading-relaxed">
+                Emergency departments often face high patient volumes, especially in non-critical (green zone) cases, 
+                leading to inefficiencies in triage and consultation. Key challenges include:
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-gray-300">
+                <li>Incomplete or unstructured patient information during initial intake</li>
+                <li>Time-consuming manual documentation by healthcare staff</li>
+                <li>Risk of missing critical “red-flag” symptoms during early assessment</li>
+                <li>Lack of standardized summaries for quick clinical understanding</li>
+                <li>Increased workload and cognitive burden on medical personnel</li>
+            </ul>
+            <p class="text-gray-300 leading-relaxed">
+                These issues can delay treatment, reduce accuracy in early risk detection, and impact overall patient care quality.
+            </p>
+        </div>
+
+        <!-- Solution -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-green">Solution</h2>
+            <p class="text-gray-300 leading-relaxed">
+                ED-CARD addresses these challenges by providing an intelligent pre-consultation system that digitizes and structures patient input before 
+                doctor interaction. The platform leverages Large Language Models (LLMs) combined with rule-based clinical logic to:
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-gray-300">
+                <li>Collect and standardize patient-reported symptoms and history</li>
+                <li>Generate concise, structured clinical summaries for doctors</li>
+                <li>Detect potential high-risk conditions through predefined red-flag rules</li>
+                <li>Support decision-making with AI reasoning grounded in clinical practice guidelines</li>
+            </ul>
+            <p class="text-gray-300 leading-relaxed">
+                This hybrid approach ensures both efficiency and reliability, enhancing workflow while maintaining clinical safety.
+            </p>
+        </div>
+
+        <!-- Features -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-yellow">Key Features</h2>
+            <ul class="list-disc pl-6 space-y-4 text-gray-300">
+                <li>
+                    <span class="font-semibold">AI-Assisted Clinical Summarization</span>
+                    <p class="ml-4 text-gray-400">
+                        Automatically converts patient inputs into structured, easy-to-read medical summaries
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">Red-Flag Detection System</span>
+                    <p class="ml-4 text-gray-400">
+                        Rule-based logic combined with AI reasoning to identify potentially serious conditions early
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">Interactive Symptom Input Interface</span>
+                    <p class="ml-4 text-gray-400">
+                        User-friendly front-end with SVG-based body region mapping for precise symptom reporting
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">Retrieval-Augmented Generation (RAG)</span>
+                    <p class="ml-4 text-gray-400">
+                        Integrates medical Clinical Practice Guidelines (CPGs) to ensure accurate and grounded AI responses
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">Structured Clinical Data Handling</span>
+                    <p class="ml-4 text-gray-400">
+                        Organizes patient data into standardized formats for better readability and downstream use
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold">Web-Based Architecture</span>
+                    <p class="ml-4 text-gray-400">
+                        Built with React and integrated with SQL databases for scalable and responsive performance
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Current Progress -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-teal">Future Development</h2>
+            <p class="text-gray-300 leading-relaxed">
+                Through the development and evaluation of ED-CARD, we identified a key limitation: a lack of continuous monitoring of patient health after 
+                the initial pre-consultation stage. To address this gap, future work will focus on integrating remote photoplethysmography (rPPG), a non-contact 
+                technique that uses a standard camera (e.g., webcam or smartphone) to estimate physiological signals such as heart rate by detecting subtle skin 
+                color changes caused by blood flow. This feature will be embedded into the web platform to enable periodic vital sign monitoring. After LLM-based 
+                symptom analysis, the system will recommend personalized time intervals for rPPG scans, allowing continuous assessment and early detection of 
+                potential deterioration, with timely prompts for patients to seek assistance from nursing staff when necessary. A major challenge lies in 
+                ensuring accurate and reliable signal extraction across diverse real-world conditions, including variations in lighting, skin tone, motion, and 
+                camera quality. Addressing this will require robust signal processing techniques, such as designing adaptive filters and noise reduction pipelines, 
+                while maintaining scalability and a user-friendly interface for practical deployment in healthcare settings.
+            </p>
+        </div>
+
+        <!-- Gallery Preview -->
+        <div class="mb-10">
+            <h2 class="text-2xl font-semibold mb-4 text-aurora-blue">Project Gallery</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <!-- Normal images -->
+            <img src="../images/edphoto.jpeg" class="gallery-img w-full h-48 object-cover rounded-lg cursor-pointer" data-index="0">
+            <img src="../images/eeconnect.jpeg" class="gallery-img w-full h-48 object-cover rounded-lg cursor-pointer" data-index="1">
+        
+            <!-- Third image with blur + overlay -->
+            <div class="relative gallery-img w-full h-48 cursor-pointer overflow-hidden rounded-lg" data-index="2">
+                <img src="../images/edui3.jpeg" class="w-full h-full object-cover filter" style="filter: blur(2px);">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-white text-lg font-semibold bg-black/50 px-3 py-1 rounded">
+                        View More
+                    </span>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="fixed inset-0 bg-black/80 flex items-center justify-center hidden z-50">
+            <button id="close-lightbox" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+            <button id="prev-img" class="absolute left-5 text-white text-3xl font-bold z-50">&#10094;</button>
+            <img id="lightbox-img" src="" class="max-h-full max-w-full rounded-lg">
+            <button id="next-img" class="absolute right-5 text-white text-3xl font-bold z-50">&#10095;</button>
+        </div>
+        
+        <script>
+            const images = [
+                '../images/edphoto.jpeg',
+                '../images/eeconnect.jpeg',
+                '../images/edui3.jpeg',
+                '../images/edui2.jpeg',
+                '../images/edui1.jpeg',
+                '../images/edui.jpeg',
+                '../images/eeconnect2.jpeg',
+                '../images/edphoto2.jpeg',
+            ];
+        
+            const galleryElements = document.querySelectorAll('.gallery-img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.getElementById('close-lightbox');
+            const prevBtn = document.getElementById('prev-img');
+            const nextBtn = document.getElementById('next-img');
+        
+            let currentIndex = 0;
+        
+            function showLightbox(index) {
+                currentIndex = index;
+                lightboxImg.src = images[index];
+                lightbox.classList.remove('hidden');
+            }
+        
+            galleryElements.forEach((el) => {
+                el.addEventListener('click', () => showLightbox(parseInt(el.dataset.index)));
+            });
+        
+            closeBtn.addEventListener('click', () => lightbox.classList.add('hidden'));
+        
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                lightboxImg.src = images[currentIndex];
+            });
+        
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                currentIndex = (currentIndex + 1) % images.length;
+                lightboxImg.src = images[currentIndex];
+            });
+        
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) lightbox.classList.add('hidden');
+            });
+        </script>
+        
+
+        <!-- Links -->
+        <div class="flex space-x-6 mt-10">
+            <a href="#" class="px-6 py-3 bg-aurora-green text-black rounded hover:scale-105 transition">
+                Live Demo
+            </a>
+            <a href="https://github.com/weihan007LOO/ed_riskdetection007" class="px-6 py-3 border border-aurora-green rounded hover:bg-aurora-green hover:text-black transition">
+                GitHub Repo
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
