@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRIAI Project</title>
+    <title>GripSmart Project</title>
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -152,7 +152,7 @@
         <!-- Title -->
         <h1 class="text-4xl font-bold mb-4">TRIAI</h1>
         <p class="text-gray-400 mb-8">
-            Next-Generation Hospital Triage System Design and Development
+            AI-Powered Home Rehabilitation System
         </p>
 
         <!-- Main Image -->
@@ -165,8 +165,10 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-green">Tech Stack</h2>
             <div class="flex flex-wrap gap-3">
-                <span class="px-3 py-1 bg-aurora-green/20 text-aurora-green rounded">Generative AI</span>
-                <span class="px-3 py-1 bg-aurora-blue/20 text-aurora-blue rounded">HTML</span>
+                <span class="px-3 py-1 bg-aurora-green/20 text-aurora-green rounded">React</span>
+                <span class="px-3 py-1 bg-aurora-blue/20 text-aurora-blue rounded">Random Forest</span>
+                <span class="px-3 py-1 bg-aurora-purple/20 text-aurora-blue rounded">TinyML</span>
+                <span class="px-3 py-1 bg-aurora-pink/20 text-aurora-blue rounded">Unity(C#)</span>
             </div>
         </div>
 
@@ -174,9 +176,9 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-blue">Overview</h2>
             <p class="text-gray-300 leading-relaxed">
-                TRIAI (Next-Generation Hospital Triage System) is an AI-powered kiosk designed to improve the efficiency and accuracy of emergency department 
-                triage. Developed during the AI in Medicine Bootcamp & Hackathon 2025, the system collects patient inputs, generates structured medical summaries, 
-                and assigns risk levels based on the Modified Early Warning Score (MEWS) to support faster and more informed clinical decision-making.
+                GripSmart is an AI-powered home rehabilitation system designed to support hand recovery through intelligent monitoring and interactive therapy. 
+                Developed for the 2026 National Health Hackathon, the system combines a sensor-integrated smart gripper, mobile application, machine learning, and 
+                gamified rehabilitation to enable patients to perform guided exercises at home while allowing therapists to monitor rehabilitation progress remotely.
             </p>
         </div>
 
@@ -184,8 +186,9 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-purple">Awards & Honors</h2>
             <p class="text-gray-300 leading-relaxed">
-                TRIAI was recognized as a Top 5 Finalist (4th Place) at the AI in Medicine Bootcamp & Hackathon 2025, organized by MESA and PEKOM Universiti Malaya 
-                in collaboration with MOSTI. The project stood out for its innovative application of AI in enhancing hospital triage workflows and healthcare delivery.
+                GripSmart was recognized as a Top Finalist and received the Team Spirit Award at the 2026 National Health Hackathon, organized by the Asia 
+                Innovative Healthcare Network, DGA Healthcare Group, MRANTI, and Cradle. The project was acknowledged for its innovative approach to digital 
+                rehabilitation, collaborative teamwork, and potential to improve accessibility to home-based recovery.
             </p>
         </div>
 
@@ -193,17 +196,17 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-pink">Problem</h2>
             <p class="text-gray-300 leading-relaxed">
-                Emergency departments often face inefficiencies in triage due to:
+                Hand rehabilitation often requires frequent hospital visits and continuous supervision by therapists, creating challenges such as:
             </p>
             <ul class="list-disc list-inside space-y-2 text-gray-300">
-                <li>High patient volume and limited medical staff</li>
-                <li>Time-consuming manual data collection and documentation</li>
-                <li>Inconsistent risk assessment during initial screening</li>
-                <li>Lack of structured and standardized patient summaries</li>
-                <li>Delays in identifying high-risk patients</li>
+                <li>Limited access to rehabilitation services for patients at home</li>
+                <li>Difficulty ensuring rehabilitation exercises are performed correctly</li>
+                <li>Lack of objective progress tracking between clinical visits</li>
+                <li>Reduced patient motivation during repetitive rehabilitation exercises</li>
+                <li>Limited personalization of recovery plans based on patient performance</li>
             </ul>
             <p class="text-gray-300 leading-relaxed">
-                These challenges can lead to longer waiting times and increased risk of delayed critical care.
+                These challenges can slow recovery and reduce the effectiveness of rehabilitation programs.
             </p>
         </div>
 
@@ -211,14 +214,11 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-green">Solution</h2>
             <p class="text-gray-300 leading-relaxed">
-                TRIAI introduces an AI-powered self-service kiosk that automates the initial triage process. Patients can provide inputs through multilingual 
-                support using text or voice, improving accessibility for diverse users. The system leverages LLMs to dynamically generate triage questions based 
-                on the patient’s chief complaint, selecting from a predefined question bank to ensure relevant, non-repetitive, and clinically important questions 
-                are asked. This structured questioning helps identify potential high-risk conditions early. In addition, patients can provide free-text 
-                descriptions of their condition, allowing them to explain situations such as how an injury occurred, which enhances the AI’s ability to generate 
-                accurate medical summaries and risk assessments. The system then produces structured summaries, assigns risk levels using MEWS-based scoring, and 
-                generates a colour-coded ticket to guide patients to the appropriate treatment zone, enabling faster, more consistent triage while reducing the 
-                workload on healthcare staff.
+                GripSmart integrates a sensor-equipped rehabilitation gripper with a mobile application, machine learning models, and interactive games to deliver 
+                personalized home-based therapy. The system measures grip strength and hand movement in real time, while embedded sensors verify that exercises 
+                are performed correctly. Machine learning models analyze rehabilitation performance to monitor recovery trends and support personalized training 
+                recommendations. Through Unity-based rehabilitation games, patients are encouraged to complete exercises in an engaging environment, improving 
+                motivation and adherence while allowing therapists to remotely monitor progress.
             </p>
         </div>
 
@@ -227,45 +227,45 @@
             <h2 class="text-2xl font-semibold mb-4 text-aurora-yellow">Key Features</h2>
             <ul class="list-disc pl-6 space-y-4 text-gray-300">
                 <li>
-                    <span class="font-semibold">Dynamic LLM-Driven Questioning</span>
+                    <span class="font-semibold">Smart Rehabilitation Gripper</span>
                     <p class="ml-4 text-gray-400">
-                        Generates relevant triage questions based on chief complaint using a predefined question bank, avoiding repetition and prioritizing critical information
+                        Measures grip strength and hand exercise performance using integrated sensors
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">AI-Generated Medical Summaries</span>
+                    <span class="font-semibold">Correct Movement Detection</span>
                     <p class="ml-4 text-gray-400">
-                        Converts structured and unstructured inputs into concise clinical summaries
+                        Verifies exercise posture and movement to ensure proper rehabilitation
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">Real-Time Data Flow to Dashboard</span>
+                    <span class="font-semibold">ML-Based Recovery Analysis</span>
                     <p class="ml-4 text-gray-400">
-                        Seamless integration with backend systems for monitoring and decision-making
+                        Uses machine learning to monitor rehabilitation progress and predict recovery trends
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">Free-Text Patient Input</span>
+                    <span class="font-semibold">Personalized Training Plans</span>
                     <p class="ml-4 text-gray-400">
-                        Allows patients to describe their condition in detail, improving AI understanding and analysis
+                        Recommends rehabilitation intensity based on patient performance
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">MEWS-Based Risk Scoring</span>
+                    <span class="font-semibold">Gamified Rehabilitation</span>
                     <p class="ml-4 text-gray-400">
-                        Automatically assigns patient risk levels for prioritization
+                        Interactive Unity-based games make rehabilitation more engaging and motivating
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">Voice & Text Input Support</span>
+                    <span class="font-semibold">Mobile App Integration</span>
                     <p class="ml-4 text-gray-400">
-                        Enables flexible and user-friendly interaction
+                        Enables patients to track progress and perform guided rehabilitation at home
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold">Multilingual Support</span>
+                    <span class="font-semibold">TinyML Edge Intelligence</span>
                     <p class="ml-4 text-gray-400">
-                        Supports multiple languages for better accessibility and inclusivity
+                        Supports lightweight on-device inference for efficient real-time analysis
                     </p>
                 </li>
             </ul>
@@ -275,11 +275,10 @@
         <div class="mb-10">
             <h2 class="text-2xl font-semibold mb-4 text-aurora-teal">Future Development</h2>
             <p class="text-gray-300 leading-relaxed">
-                Currently, the LLM is designed to align with MEWS-based scoring for risk assessment. Future development will focus on fine-tuning the model using 
-                real clinical historical data to better adapt to local patient populations and improve accuracy. In addition, the system interface will be refined 
-                through user testing to enhance usability and accessibility. Improvements in voice input accuracy, particularly for multiple languages, will also 
-                be prioritized. Finally, further testing with medical assistants and healthcare staff will be conducted to gather feedback and enhance system 
-                functionality, ensuring better integration into real clinical workflows.
+                Future development will focus on collecting larger and more diverse rehabilitation datasets to improve the accuracy and generalizability of the 
+                machine learning models. Additional rehabilitation exercises and games can be introduced to support patients with different recovery stages and 
+                hand conditions. Integration with wearable devices and remote healthcare platforms will further enable therapists to monitor patient progress, 
+                adjust rehabilitation plans remotely, and provide more personalized care.
             </p>
         </div>
 
