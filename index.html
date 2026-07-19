@@ -968,8 +968,9 @@
                 
             </div>
 
-            <!-- Another 6 -->
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 mt-5">
+            <!-- Hidden Projects -->
+        <div id="extra-lab-projects"
+             class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 mt-5 hidden">
 
             <article class="bg-dark-card rounded-lg overflow-hidden card-hover">
                     <img src="images/STM.jpeg" class="h-48 w-full object-contain bg-dark-card p-2">
@@ -1012,8 +1013,26 @@
                         </a>
                     </div>
                 </article>
-        
             </div>
+            <div class="text-center mt-8">
+                <button id="view-all-lab-btn"
+                    class="px-6 py-2 bg-gradient-to-r from-aurora-green to-aurora-blue text-dark-bg font-semibold rounded-full hover:shadow-lg transition">
+                    View All
+                </button>
+            </div>
+
+            <script>
+                const labBtn = document.getElementById('view-all-lab-btn');
+                const extraProjects = document.getElementById('extra-lab-projects');
+                
+                labBtn.addEventListener('click', () => {
+                    extraProjects.classList.toggle('hidden');
+                
+                    labBtn.textContent = extraProjects.classList.contains('hidden')
+                        ? 'View All'
+                        : 'Show Less';
+                });
+                </script>
         
             </div>
         </div>
